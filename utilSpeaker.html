@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {box-sizing: border-box;}
+a { color:white; text-decoration: none; cursor:pointer; }
+img {  vertical-align: middle;}
+
+#header {
+	background: #003399;
+	height: 55px;
+	color: white;
+	padding: 0.5em;
+	padding-left: 1em;
+}
+.headerContent{
+	margin-left: 20%;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+	width: 350px;
+	/* border-style: solid; */
+	float:left;
+	margin-left: 20%;
+	margin-top: 20px;
+}
+
+.container2 {
+	margin-left: 20px;
+  position: relative;
+/*	border-style: solid; */
+	float:left;
+	margin-top: 60px;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: grey;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+<body>
+	<!-- Header -->
+	<div id = "header">
+		<div class="headerContent">
+			<a href="index.html"><font size = "16px"> <b> Speakers </b> </font></a>
+			<a href="index.html"> Electronics > portable speakers</a>
+	</div>
+	</div>
+	<!-- Header End-->
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="https://farm1.staticflickr.com/801/41442195682_950e557dab.jpg" style="width:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="https://farm1.staticflickr.com/792/41485357401_30ea905a96.jpg" style="width:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="https://farm1.staticflickr.com/795/41485353471_e7cf744c6f.jpg" style="width:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+  <img src="https://farm1.staticflickr.com/864/41485351381_0ee0bc7288.jpg" style="width:300px">
+	  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="https://farm1.staticflickr.com/886/41485346531_7c3f967512.jpg" style="width:300px">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)"> ❮ </a>
+  <a class="next" onclick="plusSlides(1)"> ❯ </a>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://farm1.staticflickr.com/801/41442195682_950e557dab.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://farm1.staticflickr.com/797/27612642618_e0204ab70c.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://farm1.staticflickr.com/801/41442195682_950e557dab.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://farm1.staticflickr.com/797/27612642618_e0204ab70c.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://farm1.staticflickr.com/801/41442195682_950e557dab.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+  </div>
+</div>
+
+<div class="container2">
+	<h2><font color = "#003399" >Portable Bluetooth 4.0 Speaker</font></h2>
+	24 hour playtime
+	<br />66ft Bluetooth Range
+	<h2>$25.99</h2>
+	<button type="button" class ="button"onclick="alert('Please proceed to Mturk')">Purchase</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
